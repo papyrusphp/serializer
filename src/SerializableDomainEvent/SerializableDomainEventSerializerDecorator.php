@@ -34,7 +34,7 @@ final class SerializableDomainEventSerializerDecorator implements Serializer
     }
 
     /**
-     * @param class-string<DomainEvent|SerializableDomainEvent> $objectClassName
+     * @param class-string<DomainEvent> $objectClassName
      */
     public function deserialize(mixed $payload, string $objectClassName): SerializableDomainEvent|DomainEvent
     {

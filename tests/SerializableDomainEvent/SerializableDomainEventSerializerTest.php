@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Papyrus\Serializer\Test\SerializableDomainEvent;
 
+use Papyrus\EventSourcing\DomainEvent;
 use Papyrus\Serializer\SerializableDomainEvent\SerializableDomainEvent;
 use Papyrus\Serializer\SerializableDomainEvent\SerializableDomainEventSerializer;
 use Papyrus\Serializer\SerializationFailedException;
@@ -54,6 +55,7 @@ class SerializableDomainEventSerializerTest extends TestCase
         );
 
         self::assertInstanceOf(SerializableDomainEvent::class, $event);
+        self::assertInstanceOf(DomainEvent::class, $event);
         self::assertSame('1ded0f33-1cd4-416d-a7e5-2f06802e91cf', $event->getAggregateRootId());
     }
 
