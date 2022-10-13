@@ -14,11 +14,6 @@ final class TestSerializableDomainEvent implements DomainEvent, SerializableDoma
     ) {
     }
 
-    public static function getEventName(): string
-    {
-        return 'test.serializable_event_name';
-    }
-
     public function getAggregateRootId(): string
     {
         return $this->aggregateRootId;
