@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Papyrus\Serializer\Test\SerializableDomainEvent\Stub;
 
+use Papyrus\EventSourcing\DomainEvent;
 use Papyrus\Serializer\SerializableDomainEvent\SerializableDomainEvent;
 
-final class TestSerializableDomainEvent implements SerializableDomainEvent
+final class TestSerializableDomainEvent implements DomainEvent, SerializableDomainEvent
 {
     public function __construct(
         public readonly string $aggregateRootId,
