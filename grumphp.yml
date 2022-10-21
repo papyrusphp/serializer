@@ -1,6 +1,5 @@
 grumphp:
     tasks:
-        composer_require_checker: ~
         phpstan:
             configuration: phpstan.neon
         phpcsfixer:
